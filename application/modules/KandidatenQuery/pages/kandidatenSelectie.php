@@ -34,10 +34,10 @@ while ($content = mysqli_fetch_assoc($sql))
         echo utf8_encode($content["page_title"]);
    }
 
-
+   echo "<div class=\"container\">";
         echo "<div id=\"kandFilter\">";
                echo "<section class=\"queryPage\">";  
-                    echo "<div class=\"container\">";
+                    
                            //echo "<div>";
                                  echo "<form>";
                                           echo "<div clas=\"kopRegel\">";
@@ -65,8 +65,7 @@ while ($content = mysqli_fetch_assoc($sql))
                                echo "<p>Er zijn nieuwe functies opgevoerd door kandidaten</p>";
                      echo "</div>";
                echo "</section>";
-
     //echo "<script src=\"/KandidatenQuery/js/ajax.js\"></script>";
-
         echo "</div>";
+  echo "</div>";
 ?>
