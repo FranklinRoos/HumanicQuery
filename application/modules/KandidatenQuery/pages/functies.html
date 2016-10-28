@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- in productie alleen bootstrap.min.css en bootsrap.min.js gebruiken (neemt minder ruimte in -->        
+        <link rel="stylesheet" href="/KandidatenQuery/css/bootstrap.css">
+        <link rel="stylesheet" href="/KandidatenQuery/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="/KandidatenQuery/css/functies.css">
+        <link rel="stylesheet" href="/KandidatenQuery/css/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/KandidatenQuery/js/bootstrap/bootstrap.js"></script>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li><a href="/KandidatenQuery/pages/home.html">Home</a></li>
+                <li><a href="/KandidatenQuery/pages/functies.html">Functies</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="overzicht container">
+            <div class="nieuweFuncties">
+                <div class="functie col-sm-2">
+                    <h4>Nieuwe functies opvoeren</h4>
+                    <form>
+                        <div class="form-group">
+                            <label>functienaam</label>
+                            <input class="form-control" type="text" name="functieNaam">
+                        </div>
+                        <div class="form-group">
+                            <label>omschrijving</label>
+                            <textarea class="form-control" rows="5" id="omschrijving" name="omschrijving"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="nwFunctieOpslaan" type="submit" class="btn btn-primary">functie opslaan</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="andereFunctie col-sm-3">
+                    <h4>Nieuwe functies opgegeven door kandiaat</h4>
+                    <form>
+                        <div class="row">
+                            <div>
+                                <label class="col-sm-2"></label>
+                                <label class="col-sm-10">functienaam</label>
+                            </div>    
+                            <div id = "andereFuncties" class="checkbox">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <button id="andereFunctieOpslaan" type="submit" class="btn btn-primary">functies opslaan</button>
+                        </div>
+                        <div></div>
+                    </form>
+                </div>
+                <div class="wijzigFunctie col-sm-6">
+                    <h4>Functies wijzigen of verwijderen</h4>
+                    <form>
+                        <div class="form-group">
+                            <div>
+                                <label class="col-sm-1 glyphicon glyphicon-pencil updateIcon"></label>
+                                <label class="col-sm-1 glyphicon glyphicon-trash deleteIcon"></label>
+                                <label class="col-sm-4">functienaam</label>
+                                <label class="col-sm-6">omschrijving</label>
+                            </div>    
+                            <div id = "wijzigFunctie" class="checkbox"></div>
+                            <div class="form-group">
+                                <button id="wijzigFunctieOpslaan" type="submit" class="btn btn-primary">wijzigen functie</button>
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>  
+            
+            
+            
+        </div>
+        
+        
+        <script src="/KandidatenQuery/js/ajax2.js"></script>
+    </body>
+</html>

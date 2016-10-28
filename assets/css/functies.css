@@ -1,0 +1,62 @@
+body {
+    padding-top : 70px;
+}
+
+
+div#kandFilter {
+    margin-top: -15%;
+    background-color :yellow;
+}
+
+/*h2.dbfunctie, h2.dbkandidaat {
+    text-align: center;
+    margin-top:-10%;
+    margin-bottom:2%;
+}*/
+.functie {
+    /*border : 1px solid black;*/
+    background-color : #e5a7a7;
+ 
+}
+
+/*.overzicht {
+    border : 1px solid black;
+}*/
+
+.functieOmschrijving {
+    font-size : 9px;
+}
+
+.functieForm {
+    margin : 10px;
+    padding : 10px;
+}
+.andereFunctie {
+    background-color : #f2d5d5;
+    
+}
+
+#andereFuncties {
+    margin-bottom : 100px;
+}
+
+.updateIcon {
+    color : blue;
+}
+
+.deleteIcon {
+    color : red;
+}
+
+
+/*#checkboxFunctie {
+    float : left;
+}
+
+#functie2 {
+    float : left;
+}
+
+#omschrijving2 {
+    margin-bottom : 25px;
+}*/

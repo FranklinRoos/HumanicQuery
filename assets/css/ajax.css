@@ -1,0 +1,54 @@
+h1 {
+    border-bottom: 3px solid #cc9900;
+    color: #996600;
+    font-size: 30px;
+}
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table tr:nth-child(odd) {
+   /* background-color: #f1f1f1;*/
+    background-color : #e5a7a7;
+}
+table tr:nth-child(even) {
+   /* background-color: #ffffff;*/
+    background-color : #f2d5d5;
+}
+
+#kandidaat {
+    float:left;
+    width:15%;
+    margin-left : 20%;
+}
+
+#functie {
+    float:left;
+    width:15%;
+    margin-left : 5%;
+}
+
+#regioB {
+    float:left;
+    width:15%;
+    /*margin-top:-25px;*/
+    margin-left : 8%;
+}
+
+#id01 {
+    padding-top:15px;
+    margin : 25px 0px;
+}
+
+#labelKandidaat {
+    margin-right : 135px;
+}
+
+#labelFunctie {
+    margin-right : 131px;
+}
+
+#opslaan {
+    margin-left : 50px;
+}

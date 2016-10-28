@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="/KandidatenQuery/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/KandidatenQuery/css/bootstrap/bootstrap-theme.css">
+    <link rel="stylesheet" href="/KandidatenQuery/css/ajax.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/KandidatenQuery/js/bootstrap/bootstrap.js"></script>
+    
+</head>
+
+<body>
+
+    <h1>Kandidaten</h1>
+
+    <nav class="navbar navbar-default ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="navbar-toggle"><a href="/KandidatenQuery/pages/kandidatenSelectie.html">Home</a></li>
+          <li class="navbar-toggle"><a href="/KandidatenQuery/pages/functies.html">Functies</a></li>
+          <li class="navbar-toggle"><a href="#">Page 2</a></li>
+          <li class="navbar-toggle"><a href="#">Page 3</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+        <div>
+            <form>
+                <div>
+                    <label for="kandidaat" id="labelKandidaat">Kandiaat</label>
+                    <label for="functie" id="labelFunctie">Functie</label>
+                    <label for="regio" id="labelRegio">Regio</label>      
+                </div> 
+                <select id="kandidaat" name="user">
+                    <option>Geen voorkeur</option>
+                </select>
+
+                <select id="functie" name="functieNaam">
+                    <option>Alle functies</option>
+                </select>
+
+                <select id="regio" name="regio">
+                    <option>Geen voorkeur</option>
+                </select>
+            </form>
+
+            <div id="id01"></div>
+        </div>
+        <div id="meldingNieuweFunctie">
+            <p>Er zijn nieuwe functies opgevoerd door kandidaten</p>
+        </div>
+    </div>
+
+    <script src="/KandidatenQuery/js/ajax.js"></script>
+
+</body>
+</html> 
