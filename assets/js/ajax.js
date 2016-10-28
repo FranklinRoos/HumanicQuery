@@ -13,10 +13,10 @@ var xmlhttp = new XMLHttpRequest();
     var url = "http://localhost:7777/query/application/modules/KandidatenQuery/php/QueryFuncties.php";
 
     xmlhttp.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             functiesDropdown(this.responseText);     
         }
-    }
+    };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 /****** Einde Ajax call voor functie dropdown **********/
@@ -30,11 +30,11 @@ var xmlhttp = new XMLHttpRequest();
     //var url = "http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/php/QueryRegio.php";
     
     xmlhttp2.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             
             regioDropdown(this.responseText);     
         }
-    }
+    };
     xmlhttp2.open("GET", url, true);
     xmlhttp2.send();
 //tweede ajax call voor user dropdown
@@ -44,7 +44,7 @@ var xmlhttp = new XMLHttpRequest();
     //var url = "http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/php/QueryUser.php";
     
     xmlhttp3.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             
             userDropdown(this.responseText);     
         }
@@ -94,21 +94,7 @@ function functiesDropdown(response) {
         }
     }
     
- 
 
- /*   function functiesDropdown(response) {
-//array aanmaken van de ontvangen JSON data
-        var arr = JSON.parse(response);
-        var i;
-        var option = "";
-//arrau doorlopen en verschillende option aanmaken 
-        for(i = 0; i < arr.length; i++) {
-            if (arr[i].FunctieId != 99){
-                option="<option>" + arr[i].FunctieNaam + "</option>";
-                $("#functie").append(option);
-            }    
-        }
-    }*/
     
     function regioDropdown(response) {
         var arr = JSON.parse(response);
