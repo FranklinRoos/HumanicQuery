@@ -207,7 +207,7 @@ function functiesDropdown(response) {
 //ga naar de profelpagina
         //window.open ("http://localhost:7777/KandidatenQuery/pages/profiel.html", "_blank");
         //window.open ("http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/pages/profiel.html", "_blank");
-        window.open ("http://localhost:7777/query/application/modules/KandidatenQuery/pages/profiel.html", "_blank");
+        window.open ("http://localhost:7777/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=id ");
         
     }
     

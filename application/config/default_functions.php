@@ -7,7 +7,7 @@ function fHeader($pageNavId="1")
     echo "<html lang=\"en\">";
     echo "<head>";
     echo "<link href='https://fonts.googleapis.com/css?family=Lateef' rel='stylesheet' type='text/css'>";
-    //echo "<link rel=\"stylesheet\" href=\"..\..\assets\css\style.css\" type=\"text/css\" />";
+
     echo "<div id =\"header\" role=\"banner\">";
     echo "<meta charset=\"utf-8\">";
     echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">";
