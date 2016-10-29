@@ -34,18 +34,7 @@ while ($content = mysqli_fetch_assoc($sql))
    }
 
      echo "<section class=\"functiesPage\">";
-           /*echo "<nav class=\"navbar navbar-default\">";
-           //echo "<nav class=\"navbar navbar-inverse navbar-fixed-top\">";        
-            echo "<div class=\"container-fluid\">";*/
-              /*echo "<div class=\"navbar-header\">";
-                echo "<a class=\"navbar-brand\" href=\"#\">WebSiteName</a>";
-              echo "</div>";*/
-             /* echo "<ul class=\"nav navbar-nav\">";
-                echo "<li class=\"navbar-toggle\"><a href=\"$querypath"."pages/kandidatenSelectie.php\">kandidaten Filter</a></li>";
-                echo "<li class=\"navbar-toggle\"><a href=\"$querypath"."pages/functies.php\">Functies</a></li>";
-              echo "</ul>";
-            echo "</div>";
-        echo "</nav>";*/
+           
         echo "<div class=\"overzicht container\">";
             echo "<div class=\"nieuweFuncties\">";
                 echo "<div class=\"functie col-sm-2\">";
@@ -103,8 +92,7 @@ while ($content = mysqli_fetch_assoc($sql))
             
             
         echo "</div>";
-        
-        
+   
         //<script src="/KandidatenQuery/js/ajax2.js"></script>
    echo "</section>";
 ?>
