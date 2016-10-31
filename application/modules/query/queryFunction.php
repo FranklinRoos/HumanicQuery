@@ -101,7 +101,7 @@ function functieQuery ()
 {
     global $connection;
     global $cvpath;
-    global $path;
+    //global $path;
     global $imagepath;
     
   /*  if(!isSet($_SESSION['kopText']))

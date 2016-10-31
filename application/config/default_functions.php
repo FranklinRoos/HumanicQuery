@@ -5,67 +5,63 @@ function fHeader($pageNavId="1")
     
     echo "<!DOCTYPE html>";
     echo "<html lang=\"en\">";
-    echo "<head>";
-    echo "<link href='https://fonts.googleapis.com/css?family=Lateef' rel='stylesheet' type='text/css'>";
-
-    echo "<div id =\"header\" role=\"banner\">";
-    echo "<meta charset=\"utf-8\">";
-    echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">";
-    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
-
-    //<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    // haal de gegevens voor de desbetreffende pagina uit de database
-    $sql = mysqli_query($connection, "SELECT * FROM `pages` where `page_nav_id`=$pageNavId and `page_show` ='y'")
-                or die ("Je hebt geen gegevens tot je beschikking");
-    if (mysqli_num_rows($sql)==0)   
-    {
-        die ("Je hebt geen gegevens tot je beschikking");
-    }
-    while ($content = mysqli_fetch_assoc($sql)) 
-    {
-        echo "<meta name=\"description\" content=\"".$content["page_description"]."\">";
-        echo "<meta name=\"keywords\" content=\"".$content["page_keywords"]."\">";
-    }
-    echo "<meta name=\"author\" content=\"Franklin Roos, Thijs v Hout\">";
-    echo "<title>Humanic IC</title>";
-    //<!-- Bootstrap -->
-	//echo "<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css\">";
-	//echo "<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.css\">";
-	echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/bootstrap/bootstrap.min.css\" type=\"text/css\"/>";
-                echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/bootstrap/bootstrap-theme.min.css\" type=\"text/css\"/>";
-                echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/font-awesome.min.css\" type=\"text/css\"/>";
-                
-        //
-    //echo "<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">";
-    //<!-- Optional theme -->
-
-    //<!-- My theme -->
-    echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/dropmenu.css\" type=\"text/css\"/>";
-    //echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/slider.css\" type=\"text/css\"/>";
-    echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/ajax.css\" type=\"text/css\"/>"; 
-    echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/functies.css\" type=\"text/css\"/>";  
-    echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/fuikweb.css\" type=\"text/css\"/>";
+        echo "<head>";
+                echo "<link href='https://fonts.googleapis.com/css?family=Lateef' rel='stylesheet' type='text/css'>";
+                echo "<meta charset=\"utf-8\">";
+                echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">";
+                echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+                //<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+                // haal de gegevens voor de desbetreffende pagina uit de database
+                $sql = mysqli_query($connection, "SELECT * FROM `pages` where `page_nav_id`=$pageNavId and `page_show` ='y'")
+                    or die ("Je hebt geen gegevens tot je beschikking");
+                    if (mysqli_num_rows($sql)==0)   
+                        {
+                            die ("Je hebt geen gegevens tot je beschikking");
+                         }
+                    while ($content = mysqli_fetch_assoc($sql)) 
+                        {
+                            echo "<meta name=\"description\" content=\"".$content["page_description"]."\">";
+                            echo "<meta name=\"keywords\" content=\"".$content["page_keywords"]."\">";
+                         }
+                 echo "<meta name=\"author\" content=\"Franklin Roos & Thijs v Hout\">";
+                 echo "<title>HumanicQuery</title>";
+                  //<!-- Bootstrap -->
+	  //echo "<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css\">";
+	  //echo "<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.css\">";
+	  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/bootstrap/bootstrap.min.css\" type=\"text/css\"/>";
+                  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/bootstrap/bootstrap-theme.min.css\" type=\"text/css\"/>";
+                  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/font-awesome.min.css\" type=\"text/css\"/>";
+                  //<!-- Optional theme -->
+                  //<!-- My theme -->
+                  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/dropmenu.css\" type=\"text/css\"/>";
+                  //echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/slider.css\" type=\"text/css\"/>";
+                  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/ajax.css\" type=\"text/css\"/>"; 
+                  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/functies.css\" type=\"text/css\"/>";  
+                  echo "<link rel=\"stylesheet\" href=\"".$GLOBALS['path']."assets/css/fuikweb.css\" type=\"text/css\"/>";
 	
-    echo "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>";
-    echo "<script src=\"https://code.jquery.com/jquery-2.2.4.min.js\"  ></script>";
-    echo  "<script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>";
-    echo "<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/bootstrap-slider.js\"></script>";
-    //echo "<script src=\"".$GLOBALS['path']."assets/js/slider.js\" ></script>";
-    echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/ajax.js\" ></script>";
-    echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/ajax2.js\" ></script>";
-    //echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/ajax3.js\" ></script>";
-    echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/fuik.js\" ></script>";
+                  echo "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>";
+                  echo "<script src=\"https://code.jquery.com/jquery-2.2.4.min.js\"  ></script>";
+                  echo  "<script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>";
+                  echo "<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/bootstrap-slider.js\"></script>";
+                  //echo "<script src=\"".$GLOBALS['path']."assets/js/slider.js\" ></script>";
+                  echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/ajax.js\" ></script>";
+                  echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/ajax2.js\" ></script>";
+                  //echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/ajax3.js\" ></script>";
+                  echo "<script type=\"text/javascript\" src=\"".$GLOBALS['path']."assets/js/fuik.js\" ></script>";
     
-    $path=$GLOBALS['path'];
-    //$path=substr_replace($path ,"",-1);
-    //echo "<script src=\"$path/assets/js/jquery.min.js\"></script>//uitgeschakeld op do 6 okt 2016
-    echo "<script type=\"text/javascript\">
-    <!--
-    function inofuitLoggen(idinuit) {
-    location.replace('".$path."/application/modules/humanic-portal/login.php?idinuit='+idinuit);}
-    -->
-    </script>";
- 
+                  $path=$GLOBALS['path'];
+                  //$path=substr_replace($path ,"",-1);
+                  //echo "<script src=\"$path/assets/js/jquery.min.js\"></script>//uitgeschakeld op do 6 okt 2016
+                  echo "<script type=\"text/javascript\">
+                  <!--
+                           function inofuitLoggen(idinuit) {
+                           location.replace('".$path."/application/modules/humanic-portal/login.php?idinuit='+idinuit);}
+                   -->
+                         </script>";
+
+        echo "</head>";  
+    echo "<body>";
+          echo "<header>";
 }
 
 function fHeaderB($pageNavId="1")
@@ -169,47 +165,37 @@ function fHeaderB($pageNavId="1")
 
 function fFooter($pageNavId="1")
 {
+    echo "</body>";
     global $connection;
-    
     echo "<div id=\"footer\">";
-    echo "<footer class=\"footer\">";
-    //echo "<div class=\"container\">";
-    echo "<p class=\"text-muted\">";      
-    echo "<ul class=\"nav nav-pills\">";
-    //toegevoegd op zat 9 juli 2016
-    global $imagepath;
-    //echo "<div><img width=\"250\" height=\"90\" src=\"$imagepath/header2.png\" style=\" margin:30px;\"  class=\"mbr-contacts_img mbr-contacts_img--left\" />";
-    //echo "</div>";
-    $sql = mysqli_query($connection, "SELECT * FROM `nav` WHERE `nav_place` = 'footer' AND  `nav_show`= 'y' ");
-    //echo "<div><img width=\"250\" height=\"90\" src=\"$imagepath/header2.png\" style=\" margin:30px;\"  class=\"mbr-contacts_img mbr-contacts_img--left\" /></div>";
+               echo "<footer class=\"footer\">";
+                    //echo "<div class=\"container\">";
+                          echo "<p class=\"text-muted\">";      
+                                echo "<ul class=\"nav nav-pills\">";
+                                     //toegevoegd op zat 9 juli 2016
+                                     $sql = mysqli_query($connection, "SELECT * FROM `nav` WHERE `nav_place` = 'footer' AND  `nav_show`= 'y' ");
+                                     if (mysqli_num_rows($sql)==0)  
+                                         {
+                                             die ("Je hebt geen gegevens nav tot je beschikking");
+                                         }     
+                                     while ($row = mysqli_fetch_assoc($sql))
+                                         {       
+                                              if ($row['nav_id']==$pageNavId)
+                                                   {
+                                                      echo "<li role=\"presentation\" class=\"active\"><a href=\"".$GLOBALS['path'].$row['nav_url']."\">".$row['nav_naam']."</a></li>";
+                                                    } 
+                                              else
+                                                   {
+                                                      echo "<li role=\"presentation\"><a href=\"".$GLOBALS['path'].$row['nav_url']."\">".$row['nav_naam']."</a></li>";
+                                                   }
+                                         }
+                                     echo "<div class=\"merk\">Copyright (c) 2016 Humanic Development BV</div>";
+                                echo "</ul>";
+                          echo "</p>";
+               echo "</footer>";           
+     echo "</div>";
+  echo "</html>";
     
-    if (mysqli_num_rows($sql)==0)  
-    {
-        die ("Je hebt geen gegevens nav tot je beschikking");
-    }     
-    while ($row = mysqli_fetch_assoc($sql))
-    {       
-        if ($row['nav_id']==$pageNavId)
-        {
-            echo "<li role=\"presentation\" class=\"active\"><a href=\"".$GLOBALS['path'].$row['nav_url']."\">".$row['nav_naam']."</a></li>";
-        } else
-        {
-            echo "<li role=\"presentation\"><a href=\"".$GLOBALS['path'].$row['nav_url']."\">".$row['nav_naam']."</a></li>";
-        }
-    }
-    echo "<div class=\"merk\">Copyright (c) 2016 Humanic Development BV</div>";
-    echo "</ul></p>";
-    //echo "</div>";
-    echo "</footer>";
-    echo "
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src=\"assets/js/jquery.min.js\"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src=\"assets/js/bootstrap.min.js\"></script>
-    </body>
-    </html>";
-    echo "</div>";
 }
 
 function footer()
@@ -226,81 +212,81 @@ function footer()
 function navigatie($pageNavId="1")
 {
     global $connection;
-    
-    echo "<nav class=\"navbar navbar-inverse navbar-fixed-top\" id=\"navBalk\">";
-    echo "<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">";
-    echo "<span class=\"sr-only\">Toggle navigation</span>";
-    echo "<span class=\"icon-bar\"></span>";
-    echo "<span class=\"icon-bar\"></span>";
-    echo "<span class=\"icon-bar\"></span>";
-    echo "</button>";
-    echo "<div>";
-       echo "<a class=\"navbar-brand\" href=\"".$GLOBALS['path']."index.php\">";
-       echo "<img src=\"".$GLOBALS['path']."assets/images/header2.png\" alt=\"humanic-logo\" width=\"140\" height=\"40\" </a>";
-       echo "</a>";
-    echo "</div>";
-    echo "<ul class=\"nav navbar-nav\" id=\"navItems\">";
-    // selecteer alles (voor de navigatie) voor de header en show=y 
-      if(!isSet($_SESSION["user_authorisatie"]) OR $_SESSION["user_authorisatie"] == 'elm'){
-        $sql = mysqli_query($connection, "SELECT * FROM `nav` where `nav_place`='header' AND `nav_auth`='elm' AND `nav_taal`='nl' AND `nav_show`='y' order by `volgorde` ");
-     }
-     else {
-         $sql = mysqli_query($connection, "SELECT * FROM `nav` where `nav_place`='header' AND `nav_auth`='admin' AND `nav_taal`='nl' AND `nav_show`='y' order by `volgorde` ");
-     }
+   
+             echo "<nav class=\"navbar navbar-inverse navbar-fixed-top\" id=\"navBalk\">";
+                      echo "<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">";
+                             echo "<span class=\"sr-only\">Toggle navigation</span>";
+                             echo "<span class=\"icon-bar\"></span>";
+                             echo "<span class=\"icon-bar\"></span>";
+                             echo "<span class=\"icon-bar\"></span>";
+                      echo "</button>";
+                      echo "<div>";
+                             echo "<a class=\"navbar-brand\" href=\"".$GLOBALS['path']."index.php\">";
+                                    echo "<img src=\"".$GLOBALS['path']."assets/images/header2.png\" alt=\"humanic-logo\" width=\"140\" height=\"40\" </a>";
+                            echo "</a>";
+                     echo "</div>";
+                     echo "<ul class=\"nav navbar-nav\" id=\"navItems\">";
+                             // selecteer alles (voor de navigatie) voor de header en show=y 
+                             if(!isSet($_SESSION["user_authorisatie"]) OR $_SESSION["user_authorisatie"] == 'elm')
+                                 {
+                                     $sql = mysqli_query($connection, "SELECT * FROM `nav` where `nav_place`='header' AND `nav_auth`='elm' AND `nav_taal`='nl' AND `nav_show`='y' order by `volgorde` ");
+                                 }
+                             else 
+                                 {
+                                     $sql = mysqli_query($connection, "SELECT * FROM `nav` where `nav_place`='header' AND `nav_auth`='admin' AND `nav_taal`='nl' AND `nav_show`='y' order by `volgorde` ");
+                                 }
      
-    // aanmaken array voor gebruik in function
-    while($ln = mysqli_fetch_assoc($sql))
-    {
-    $menu_items[] = (object) array(
-    'id'   =>$ln['nav_id'] , 
-    'name' =>$ln['nav_naam'],
-    'url'  =>$ln['nav_url'],
-    'place'=>$ln['nav_place'],
-    'show' =>$ln['nav_show'],
-    'parent_id'=>$ln['nav_parent_id']
-    );
-    }
+                             // aanmaken array voor gebruik in function
+                            while($ln = mysqli_fetch_assoc($sql))
+                                 {
+                                      $menu_items[] = (object) array(
+                                         'id'   =>$ln['nav_id'] , 
+                                         'name' =>$ln['nav_naam'],
+                                         'url'  =>$ln['nav_url'],
+                                         'place'=>$ln['nav_place'],
+                                         'show' =>$ln['nav_show'],
+                                         'parent_id'=>$ln['nav_parent_id']
+                                        );
+                                   }
 
-    global $menuItems;
-    global $parentMenuIds;
-    //aanmaken array van parent_id's voor checken op children
-    foreach($menu_items as $parentId)
-    {
-      $parentMenuIds[] = $parentId->parent_id;
-    }
-    // menu items toewijzen aan de global array voor gebruik in de functie
-    $menuItems = $menu_items;
-    // menu items ophalen
-    generate_menu(0);
+                              global $menuItems;
+                              global $parentMenuIds;
+                                //aanmaken array van parent_id's voor checken op children
+                              foreach($menu_items as $parentId)
+                                 {
+                                     $parentMenuIds[] = $parentId->parent_id;
+                                 }
+                               // menu items toewijzen aan de global array voor gebruik in de functie
+                              $menuItems = $menu_items;
+                                // menu items ophalen
+                              generate_menu(0);
 
-    echo "</li>";
-    echo "</ul>";
+                          echo "</li>";
+                      echo "</ul>";
     /********** hier is het inlog/uitlog blok geplaats do 6 okt 2016 *******/
-     echo "<div id=\"inuitBlok\">";
-     echo "<div class=\"navbar-form pull-right\" id=\"inuitKnop\">";
-    //checken op inloggen en de knop in/uitloggen tonen
-    if (isSet($_SESSION["loginnaam"])) 
-    {
-         $date = $_SESSION['user_sinds'];//(yyyy-mm-dd)
-         $datesplit = explode('-',$date);
-         $maanden = array('jan','feb','maart','april','mei','juni','juli','aug','sep','okt','nov','dec');
-         $datum = ($datesplit[2]*1)."-".$maanden[$datesplit[1]-1]."-".$datesplit[0];//de index bij $maanden[$datesplit[1] wordt met 1 verminderd omdat de array '$maanden' met 0 begint
-         
-
-        echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(0)\" value=\"Uitloggen\" class=\"btn\"></button>";
-        echo "</div><div class=\"navbar-form pull-right\">";
-        echo "<div id=\"inlognaam\"><a class=\"inlognm\">";
-        echo "".ucfirst($_SESSION["loginnaam"])."</a><br/>";      
-        echo "<a class=\"regsinds\">Registreerd sinds: ".$datum."</a></div></div>" ;
-     } 
-     else
-    {
-        echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(1)\" value=\"Inloggen\" class=\"btn\"></button></div>";
-    }
-    echo "</form>"; 
-    /********** einde inlog/uitlog blok do 6 okt 2016******/
-    echo "</div>";
-    echo "</nav>";
+                     echo "<div id=\"inuitBlok\">";
+                            echo "<div class=\"navbar-form pull-right\" id=\"inuitKnop\">";
+                                  //checken op inloggen en de knop in/uitloggen tonen
+                                   if (isSet($_SESSION["loginnaam"])) 
+                                       {
+                                            $date = $_SESSION['user_sinds'];//(yyyy-mm-dd)
+                                            $datesplit = explode('-',$date);
+                                            $maanden = array('jan','feb','maart','april','mei','juni','juli','aug','sep','okt','nov','dec');
+                                            $datum = ($datesplit[2]*1)."-".$maanden[$datesplit[1]-1]."-".$datesplit[0];//de index bij $maanden[$datesplit[1] wordt met 1 verminderd omdat de array '$maanden' met 0 begint   
+                                            echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(0)\" value=\"Uitloggen\" class=\"btn\"></button>";
+                                            echo "</div><div class=\"navbar-form pull-right\">";
+                                            echo "<div id=\"inlognaam\"><a class=\"inlognm\">";
+                                            echo "".ucfirst($_SESSION["loginnaam"])."</a><br/>";      
+                                            echo "<a class=\"regsinds\">Registreerd sinds: ".$datum."</a></div></div>" ;
+                                        } 
+                                     else
+                                        {
+                                            echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(1)\" value=\"Inloggen\" class=\"btn\"></button></div>";
+                                         }
+                              echo "</div>"; 
+                      echo "</div>"; /********** einde inlog/uitlog blok do 6 okt 2016******/
+              echo "</nav>";
+    echo "</header>";
     
 }
 
@@ -483,44 +469,43 @@ function navigatieAdmin($pageNavId="1")
     global $connection;
     
     echo "<nav class=\"navbar navbar-inverse navbar-fixed-top\" id=\"navBalk\">";
-    echo "<div class=\"container\">";
-        echo "<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">";
-           echo "<span class=\"sr-only\">Toggle navigation</span>";
-           echo "<span class=\"icon-bar\"></span>";
-           echo "<span class=\"icon-bar\"></span>";
-           echo "<span class=\"icon-bar\"></span>";
-        echo "</button>";
-        echo "<ul class=\"nav navbar-nav\" id=\"navItems\">";
-        // haal uit database gegevens
-        // verwerk het in de list-item
-           $sql = mysqli_query($connection, "SELECT * FROM `navadmin` WHERE  `navadmin_show` = 'y'  order by `navadmin_volgorde`");
-           // aanmaken array voor gebruik in function
-    while($ln = mysqli_fetch_assoc($sql))
-    {
-    $menu_items[] = (object) array(
-    'id'   =>$ln['navadmin_id'] , 
-    'name' =>$ln['navadmin_naam'],
-    'url'  =>$ln['navadmin_url'],
-    'place'=>$ln['navadmin_volgorde'],
-    'show' =>$ln['navadmin_show'],
-    'parent_id'=>$ln['navadmin_parent_id']
-    );
-    }
+             echo "<div class=\"container\">";
+                       echo "<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">";
+                             echo "<span class=\"sr-only\">Toggle navigation</span>";
+                             echo "<span class=\"icon-bar\"></span>";
+                             echo "<span class=\"icon-bar\"></span>";
+                             echo "<span class=\"icon-bar\"></span>";
+                       echo "</button>";
+                       echo "<ul class=\"nav navbar-nav\" id=\"navItems\">";
+                                      // haal uit database gegevens
+                                      // verwerk het in de list-item
+                                     $sql = mysqli_query($connection, "SELECT * FROM `navadmin` WHERE  `navadmin_show` = 'y'  order by `navadmin_volgorde`");
+                                       // aanmaken array voor gebruik in function
+                                      while($ln = mysqli_fetch_assoc($sql))
+                                            {
+                                                   $menu_items[] = (object) array(
+                                                    'id'   =>$ln['navadmin_id'] , 
+                                                    'name' =>$ln['navadmin_naam'],
+                                                    'url'  =>$ln['navadmin_url'],
+                                                    'place'=>$ln['navadmin_volgorde'],
+                                                    'show' =>$ln['navadmin_show'],
+                                                    'parent_id'=>$ln['navadmin_parent_id']
+                                                    );
+                                               }
+                                             global $menuItems;
+                                             global $parentMenuIds;
+                                                 //aanmaken array van parent_id's voor checken op children
+                                             foreach($menu_items as $parentId)
+                                                {
+                                                    $parentMenuIds[] = $parentId->parent_id;
+                                                 }
+                                                // menu items toewijzen aan de global array voor gebruik in de functie
+                                             $menuItems = $menu_items;
+                                                // menu items ophalen
+                                             generate_menu(0);
 
-    global $menuItems;
-    global $parentMenuIds;
-    //aanmaken array van parent_id's voor checken op children
-    foreach($menu_items as $parentId)
-    {
-      $parentMenuIds[] = $parentId->parent_id;
-    }
-    // menu items toewijzen aan de global array voor gebruik in de functie
-    $menuItems = $menu_items;
-    // menu items ophalen
-    generate_menu(0);
-
-    echo "</li>";
-    echo "</ul>";
+                                    echo "</li>";
+                       echo "</ul>";
            
            /*if (mysqli_num_rows($sql)==0)  
               {
@@ -538,29 +523,29 @@ function navigatieAdmin($pageNavId="1")
                      }
                 }
         echo "</ul>";*/
-        echo "<div id=\"inuitBlok\">";
-             echo "<div class=\"navbar-form pull-right\" id=\"inuitKnop\">";
-                //checken op inloggen en de knop in/uitloggen tonen
-                if (isSet($_SESSION["loginnaam"])) 
-                   {
-                       $date = $_SESSION['user_sinds'];//(yyyy-mm-dd)
-                       $datesplit = explode('-',$date);
-                       $maanden = array('jan','feb','maart','april','mei','juni','juli','aug','sep','okt','nov','dec');
-                       $datum = ($datesplit[2]*1)."-".$maanden[$datesplit[1]-1]."-".$datesplit[0];//de index bij $maanden[$datesplit[1] wordt met 1 verminderd omdat de array '$maanden' met 0 begint      
-                       echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(0)\" value=\"Uitloggen\" class=\"btn\"></button>";
-             echo "</div>"; 
-                       echo "<div class=\"navbar-form pull-right\">";
-                          echo "<div id=\"inlognaam\"><a class=\"inlognm\">";
-                          echo "".ucfirst($_SESSION["loginnaam"])."</a><br/>";      
-                          echo "<a class=\"regsinds\">Registreerd sinds: ".$datum."</a>";
-                       echo "</div>";
-             echo "</div>";
-                   } 
-                else
-                  {
-                      echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(1)\" value=\"Inloggen\" class=\"btn\"></button>";
-                  }
-    echo "</form>"; 
+                       echo "<div id=\"inuitBlok\">";
+                            echo "<div class=\"navbar-form pull-right\" id=\"inuitKnop\">";
+                                   //checken op inloggen en de knop in/uitloggen tonen
+                                   if (isSet($_SESSION["loginnaam"])) 
+                                       {
+                                             $date = $_SESSION['user_sinds'];//(yyyy-mm-dd)
+                                             $datesplit = explode('-',$date);
+                                             $maanden = array('jan','feb','maart','april','mei','juni','juli','aug','sep','okt','nov','dec');
+                                             $datum = ($datesplit[2]*1)."-".$maanden[$datesplit[1]-1]."-".$datesplit[0];//de index bij $maanden[$datesplit[1] wordt met 1 verminderd omdat de array '$maanden' met 0 begint      
+                                             echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(0)\" value=\"Uitloggen\" class=\"btn\"></button>";
+                             echo "</div>"; 
+                             echo "<div class=\"navbar-form pull-right\">";
+                                     echo "<div id=\"inlognaam\"><a class=\"inlognm\">";
+                                           echo "".ucfirst($_SESSION["loginnaam"])."</a><br/>";      
+                                           echo "<a class=\"regsinds\">Registreerd sinds: ".$datum."</a>";
+                             echo "</div>";
+                        echo "</div>";
+                                       } 
+                                   else
+                                       {
+                                           echo "<input type =\"button\" id=\"login\" onclick=\"inofuitLoggen(1)\" value=\"Inloggen\" class=\"btn\"></button>";
+                                       }
+    //echo "</form>"; 
     echo "</div>";
     echo "</nav>";
 }

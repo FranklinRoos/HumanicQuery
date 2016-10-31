@@ -68,4 +68,5 @@ while ($content = mysqli_fetch_assoc($sql))
     //echo "<script src=\"/KandidatenQuery/js/ajax.js\"></script>";
         echo "</div>";
   echo "</div>";
+  fFooter();
 ?>
