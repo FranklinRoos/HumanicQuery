@@ -64,14 +64,14 @@ if (isset($_SESSION["suc6login"]) &&  isSet($_SESSION['loginnaam'])) //deze info
             fHeader($pageNavId);
             navigatie($pageNavId);
             echo "<div class=\"container\">";
-            echo "<h1>Je bent uitgelogd</h1>";
-            echo "<br/>";
-            echo "<h3>Ik dank je voor je bezoek aan ons website,";
-            echo "<br/>";
-            echo "en hoop je hier spoedig weer te mogen verwelkomen.</h3>";
-            echo "<br/><br/>";
-            echo "<h4>Je kunt <a href=\"login.php\">hier</a> opnieuw inloggen.</h4>";
-            echo "<br/>";
+                  echo "<h1>Je bent uitgelogd </h1>";
+                  echo "<br/>";
+                  echo "<h3>Ik dank je voor je bezoek aan onze website,";
+                  echo "<br/>";
+                  echo "en hoop je hier spoedig weer te mogen verwelkomen.</h3>";
+                  echo "<br/><br/>";
+                  echo "<h4>Je kunt <a href=\"login.php\">hier</a> opnieuw inloggen.</h4>";
+                  echo "<br/>";
             echo "</div>";
             
          } 

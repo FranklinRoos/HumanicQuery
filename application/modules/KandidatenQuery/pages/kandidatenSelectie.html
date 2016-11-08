@@ -10,12 +10,21 @@
     <script src="/KandidatenQuery/js/bootstrap/bootstrap.js"></script>
     
 </head>
-
+<?php
+include ("../../../config/config.php");
+include ("../../../config/connect.php");
+include("../../../config/default_functions.php");
+global $connection;
+global $querypath;
+session_start(); 
+$pageNavId=30;
+navigatieAdmin($pageNavId);
+?>
 <body>
 
     <h1>Kandidaten</h1>
 
-    <nav class="navbar navbar-default ">
+  <!-- <nav class="navbar navbar-default ">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">WebSiteName</a>
@@ -27,7 +36,7 @@
           <li class="navbar-toggle"><a href="#">Page 3</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     
     <div class="container">
         <div>

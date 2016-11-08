@@ -10,7 +10,7 @@ $(document).ready(function(){
 var xmlhttp = new XMLHttpRequest();
 
     //var url = "http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/QueryFuncties.php";
-    var url = "http://localhost:7777/HumanicQuery/application/modules/KandidatenQuery/php/QueryFuncties.php";
+    var url = "http://localhost:7777/query/application/modules/KandidatenQuery/php/QueryFuncties.php";
 
     xmlhttp.onreadystatechange=function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -26,7 +26,7 @@ var xmlhttp = new XMLHttpRequest();
 //tweede ajax call voor regio dropdown
     var xmlhttp2 = new XMLHttpRequest();
 
-    var url = "http://localhost:7777/HumanicQuery/application/modules/KandidatenQuery/php/QueryRegio.php";
+    var url = "http://localhost:7777/query/application/modules/KandidatenQuery/php/QueryRegio.php";
     //var url = "http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/php/QueryRegio.php";
     
     xmlhttp2.onreadystatechange=function() {
@@ -40,7 +40,7 @@ var xmlhttp = new XMLHttpRequest();
 //tweede ajax call voor user dropdown
     var xmlhttp3 = new XMLHttpRequest();
 
-    var url = "http://localhost:7777/HumanicQuery/application/modules/KandidatenQuery/php/QueryUser.php";
+    var url = "http://localhost:7777/query/application/modules/KandidatenQuery/php/QueryUser.php";
     //var url = "http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/php/QueryUser.php";
     
     xmlhttp3.onreadystatechange=function() {
@@ -87,7 +87,7 @@ function functiesDropdown(response) {
         var option = "";
 
         for(i = 0; i < arr.length; i++) {
-            if (arr[i].FunctieId !== 99){
+            if (arr[i].FunctieId != 99){
                 option="<option>" + arr[i].FunctieNaam + "</option>";
                 $("#functie").append(option);
             }    
@@ -135,7 +135,7 @@ function functiesDropdown(response) {
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url:"http://localhost:7777/HumanicQuery/application/modules/KandidatenQuery/php/QueryJson.php",
+            url:"http://localhost:7777/query/application/modules/KandidatenQuery/php/QueryJson.php",
             //url:"http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/php/QueryJson.php",
             data : '[{"functieNaam":"' + functieSel + '", "regioNaam":"' + regioSel + '", "userId":"' + user[userSel] + '" } ]',
             dataType: "text",
@@ -189,11 +189,11 @@ function functiesDropdown(response) {
 //bepaal de user_id om het juiste profiel te tonen. Dit is de eerst column van de betreffende rij
         var id = $(x).closest("tr").find('td:eq(0)').text();
 //bewaar de user_id om deze in de profiel pagina te gebruiken
-        //sessionStorage.user = id;
+        sessionStorage.user = id;
 //ga naar de profelpagina
         //window.open ("http://localhost:7777/KandidatenQuery/pages/profiel.html", "_blank");
         //window.open ("http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/pages/profiel.html", "_blank");
-        window.open ("http://localhost:7777/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=2 ");
+        window.open ("http://localhost:7777/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=id ");
         
     }
     

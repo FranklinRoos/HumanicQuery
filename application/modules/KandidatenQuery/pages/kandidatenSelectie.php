@@ -11,7 +11,7 @@ fHeader($pageNavId);//actief=$pageNavId);
 
 if(isSet($_SESSION['loginnaam']))
   {
-   navigatieAdmin($pageNavId);
+    navigatieAdmin($pageNavId);
   }
   
 else
@@ -22,23 +22,19 @@ else
    }
 
 
-$sql = mysqli_query($connection,"SELECT * FROM `pages` WHERE `page_nav_id`=$pageNavId  and `page_taal` = 'nl' and `page_show` ='y' ");
+/*$sql = mysqli_query($connection,"SELECT * FROM `pages` WHERE `page_nav_id`=$pageNavId  and `page_taal` = 'nl' and `page_show` ='y' ");
     if (mysqli_num_rows($sql)==0)   
       {
          die ("Je hebt geen gegevens tot je beschikking");
       }
 while ($content = mysqli_fetch_assoc($sql)) 
-   {   // show de inhoud     
-        echo "<meta name=\"description\" content=\"".$content["page_description"]."\">";
-        echo "<meta name=\"keywords\" content=\"".$content["page_keywords"]."\">";       
+   {   // show de inhoud          
         echo utf8_encode($content["page_title"]);
-   }
-
+   }*/
    echo "<div class=\"container\">";
-        echo "<div id=\"kandFilter\">";
+        echo "<h2 class=\"dbkandidaat\">Kandidaten Filter</h2>";
                echo "<section class=\"queryPage\">";  
                     
-                           //echo "<div>";
                                  echo "<form>";
                                           echo "<div clas=\"kopRegel\">";
                                                     echo "<label for=\"kandidaat\" id=\"labelKandidaat\">Kandiaat</label>";
@@ -60,13 +56,12 @@ while ($content = mysqli_fetch_assoc($sql))
                                           echo "</div>";  
                                  echo "</form>";
                                  echo "<div id=\"id01\"></div>";
-                     //echo "</div>";
+                     
                      echo "<div id=\"meldingNieuweFunctie\">";
                                echo "<p>Er zijn nieuwe functies opgevoerd door kandidaten</p>";
                      echo "</div>";
                echo "</section>";
-    //echo "<script src=\"/KandidatenQuery/js/ajax.js\"></script>";
-        echo "</div>";
-  echo "</div>";
-  fFooter();
+               //echo "<script src=\"/KandidatenQuery/js/ajax.js\"></script>";
+   echo "</div>";
+fFooter();
 ?>

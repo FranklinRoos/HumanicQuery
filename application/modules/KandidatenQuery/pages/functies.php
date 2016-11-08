@@ -21,7 +21,7 @@ else
             </script>";  
    }
 
-$sql = mysqli_query($connection,"SELECT * FROM `pages` WHERE `page_nav_id`=$pageNavId  and `page_taal` = 'nl' and `page_show` ='y' ");
+/*$sql = mysqli_query($connection,"SELECT * FROM `pages` WHERE `page_nav_id`=$pageNavId  and `page_taal` = 'nl' and `page_show` ='y' ");
     if (mysqli_num_rows($sql)==0)   
       {
          die ("Je hebt geen gegevens tot je beschikking");
@@ -31,8 +31,8 @@ while ($content = mysqli_fetch_assoc($sql))
         echo "<meta name=\"description\" content=\"".$content["page_description"]."\">";
         echo "<meta name=\"keywords\" content=\"".$content["page_keywords"]."\">";
         echo utf8_encode($content["page_title"]);     
-   }
-
+   }*/
+     echo "<h2>Database aanpassingen m.b.t. tabel functie</h2>";
      echo "<section class=\"functiesPage\">";
            
         echo "<div class=\"overzicht container\">";
