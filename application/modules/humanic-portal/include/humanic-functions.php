@@ -790,9 +790,7 @@ mail($to, $subject, $email, implode("\r\n", $headers) );
 if(isSet($motivatie)){
     $_SESSION['motivatie'] = $motivatie;
 }
-
-
-    
+  
     echo " <div class=\"container\">";
             echo "<h3 class=\"profiel\">Het profiel van ".$_SESSION['voornaam']." ".$_SESSION['tussenvoegsel']." ".$_SESSION['achternaam']."</h3>";          
            echo "<form id=\"fuikweb-register\" action='".htmlspecialchars($_SERVER["PHP_SELF"])."' method=\"post\"  enctype=\"multipart/form-data\" role=\"form\">";

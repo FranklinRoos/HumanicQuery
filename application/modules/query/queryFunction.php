@@ -271,8 +271,7 @@ if(isSet($_SESSION['blad'])&& $_SESSION['blad'] !='user_blad2')
     } 
      
      
-        //zaterdag 13 aug 2016 toegevoegd
-   
+        //zaterdag 13 aug 2016 toegevoeg   
 echo"<div class=\"container\">";  
      echo "<div class=\"container\" style=\"margin-top: 0.5%;\">";           
         echo "<div id=\"overzichtTabel\" class=\"table-responsive\">";
@@ -326,10 +325,7 @@ echo"<div class=\"container\">";
                      //echo "<td class=\"prev\">".(($count_users - $to)> 0?"<a href=queryMaken.php?user_page2=" .$next. "> next </a>":"")."</td>"; 
                  echo "</tr>";
         echo "</table>";    
-            
-            
-            
-            
+                        
         }
         
     if($queryStatus == 'R')
@@ -347,8 +343,7 @@ echo"<div class=\"container\">";
                     } 
      
      
-             //zondag 21 aug 2016 toegevoegd
-   
+             //zondag 21 aug 2016 toegevoegd  
  echo"<div class=\"container\">";  
      echo "<div class=\"container\" style=\"margin-top: 0.5%;\">";               
              echo "<div id=\"overzichtTabel\" class=\"table-responsive\">";

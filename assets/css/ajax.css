@@ -13,7 +13,7 @@ table tr:nth-child(odd) {
     background-color : #e5a7a7;
 }
 table tr:nth-child(even) {
-   /* background-color: #ffffff;*/
+    /*background-color: #ffffff;*/
     background-color : #f2d5d5;
 }
 

@@ -146,7 +146,8 @@ function functiesDropdown(response) {
         });
     };
     
-       function myFunction(response) {
+
+    function myFunction(response) {
 //arr wordt aangemaakt met de JSON data
         arr = JSON.parse(response);
         var i;
@@ -169,7 +170,9 @@ function functiesDropdown(response) {
             arr[i].Telefoon +
             //"</td><td><a href = 'http://localhost:7777/KandidatenQuery/cv/" +
             //"</td><td><a href = 'http://".$_SERVER['HTTP_HOST']."/humanic/assets/cv/" +
-            "</td><td><a href = 'http://localhost:7777/HumanicIC/humanic/assets/cv/" +        
+            //"</td><td><a href = 'http://localhost:7777/HumanicIC/humanic/assets/cv/" +
+            //"</td><td><a href = 'http://triplers.nl/humanic/assets/cv/" +
+            "</td><td><a href = 'http://localhost:7777/HumanicIC/humanic/assets/cv/" +  			
             arr[i].Cv + "' target = '_blank' >cv</a>" +  
             "</td><td><button class='profiel'>Profiel</button>" +
             "</td></tr>";
@@ -186,15 +189,20 @@ function functiesDropdown(response) {
     }
     
     function profiel(x){
-//bepaal de user_id om het juiste profiel te tonen. Dit is de eerst column van de betreffende rij
-        var id = $(x).closest("tr").find('td:eq(0)').text();
+//bepaal de user_id om het juiste profiel te tonen. Dit is de eerste column van de betreffende rij
+         var id = $(x).closest("tr").find('td:eq(0)').text();
+         
 //bewaar de user_id om deze in de profiel pagina te gebruiken
-        //sessionStorage.user = id;
+        sessionStorage.user = id;
+
 //ga naar de profelpagina
         //window.open ("http://localhost:7777/KandidatenQuery/pages/profiel.html", "_blank");
-        //window.open ("http://".$_SERVER['HTTP_HOST']."/query/application/modules/KandidatenQuery/pages/profiel.html", "_blank");
-        window.open ("http://localhost:7777/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=2 ");
-        
+        //window.open ("http://".$_SERVER['HTTP_HOST']."/HumanicQuery/application/modules/KandidatenQuery/pages/profiel.html", "_blank");
+        //window.open ("http://localhost:7777/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=id ");		
+		//window.open ("http://".$_SERVER['HTTP_HOST']."/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=id ");
+		//window.open ("http://triplers.nl/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=id");
+        window.open ("http://localhost:7777/HumanicQuery/application/modules/humanic-portal/kandidaat.php?user_id=id ");
     }
+    
     
     }); 
